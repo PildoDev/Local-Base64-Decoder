@@ -31,7 +31,7 @@ Coming soon: GitHub Pages deployment 🚀
 ### Installation
 ```bash
 # clone the repository
-git clone https://github.com/<your-username>/Local-Base64-Decoder.git
+git clone https://github.com/PildoDev/Local-Base64-Decoder.git
 
 cd Local-Base64-Decoder
 
