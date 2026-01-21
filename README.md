@@ -25,7 +25,7 @@ Coming soon: GitHub Pages deployment 🚀
 ## Getting Started
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (>= 18)
+- [Node.js](https://nodejs.org/) (>= 22)
 - npm (comes with Node.js)
 
 ### Installation
