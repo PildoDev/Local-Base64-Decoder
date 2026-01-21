@@ -1,4 +1,4 @@
-import { createContext, useContext, type ReactNode, useState } from 'react';
+import { createContext, useContext, type ReactNode, useState, useEffect } from 'react';
 
 /**
  * Context para estado global de la aplicación
@@ -16,15 +16,22 @@ interface AppProviderProps {
 }
 
 export function AppProvider({ children }: AppProviderProps) {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
   };
 
+  // Aplicar clase de tema al body cuando cambie
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
   return (
     <AppContext.Provider value={{ theme, toggleTheme }}>
-      {children}
+      <div className={theme}>
+        {children}
+      </div>
     </AppContext.Provider>
   );
 }
